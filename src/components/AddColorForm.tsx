@@ -1,6 +1,6 @@
 import React, { FormEvent, useEffect, useRef } from 'react'
 import { useInput } from '../hooks/useInput';
-import { useColor } from '../hooks/colorHook';
+import { useColor } from '../hooks/ColorProvider';
 
 
 export default function AddColorForm() {

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ColorProvider } from './hooks/colorHook';
+import { ColorProvider } from './hooks/ColorProvider';
 
 ReactDOM.render(
   <React.StrictMode>

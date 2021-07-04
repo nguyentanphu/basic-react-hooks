@@ -2,7 +2,7 @@ import React from 'react'
 import { FaTrash } from 'react-icons/fa';
 import { ColorType } from '../color'
 import StarRating from './StarRating';
-import { useColor } from '../hooks/colorHook';
+import { useColor } from '../hooks/ColorProvider';
 
 
 export default function Color({id, title, color, rating}: ColorType) {
