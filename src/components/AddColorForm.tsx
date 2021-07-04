@@ -1,17 +1,17 @@
-import React, { FormEvent, useRef } from 'react'
+import React, { FormEvent, useEffect, useRef } from 'react'
 import { useInput } from '../hooks/useInput';
+import { useColor } from '../hooks/colorHook';
 
-interface Props {
-  onNewColor: (title: string, color: string) => void;
-}
 
-export default function AddColorForm({onNewColor}: Props) {
+export default function AddColorForm() {
   const [titleProps, resetTitle] = useInput('');
   const [colorProps, resetColor] = useInput('#000000');
 
+  const {addColor} = useColor();
+
   const submit = (event: FormEvent) => {
     event.preventDefault();
-    onNewColor(titleProps.value, colorProps.value);
+    addColor(titleProps.value, colorProps.value);
     resetTitle();
     resetColor();
   }

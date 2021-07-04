@@ -1,17 +1,14 @@
 import React from 'react'
-import { ColorType } from '../color';
 import Color from './Color';
+import { useColor } from '../hooks/colorHook';
 
-interface Props {
-  colors: ColorType[];
-  onRemoveColor: (id: string) => void;
-}
+export default function ColorList() {
+  const {colors} = useColor();
 
-export default function ColorList({colors, onRemoveColor = f => f}: Props) {
   if (!colors.length) return <div>No colors listed!</div>
   return (
     <>
-    {colors.map(c => <Color key={c.id} onRemove={onRemoveColor} {...c}/>)}
+    {colors.map(c => <Color key={c.id} {...c}/>)}
     </>
   )
 }
